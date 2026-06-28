@@ -1,0 +1,97 @@
+AWS vs Azure Cost Comparison Report (Updated)
+
+5. Database Service Comparison
+
+To provide a more comprehensive cloud pricing comparison, managed database services from both AWS and Microsoft Azure were included alongside compute and storage services.
+
+Amazon RDS for MySQL
+
+Amazon Relational Database Service (Amazon RDS) is a managed database service that simplifies the deployment, operation, and maintenance of relational databases. It supports automated backups, software patching, monitoring, and scaling while reducing administrative overhead.
+
+Selected Configuration
+
+- Database Engine: MySQL
+- Instance Type: db.c6gd.medium
+- Deployment: Multi-AZ (Readable Standby)
+- Storage: General Purpose SSD (gp3)
+- Storage Capacity: 20 GB (configured for the comparison)
+- Estimated Monthly Cost: $199.66
+
+Insert AWS RDS Screenshot Here
+
+Azure SQL Database
+
+Azure SQL Database is Microsoft's fully managed relational database service. It provides built-in high availability, automated backups, security features, and automatic software updates.
+
+Selected Configuration
+
+- Service: Azure SQL Database
+- Region: South Africa North
+- Deployment Model: General Purpose (Provisioned)
+- Storage Capacity: 32 GB
+- Estimated Monthly Cost: $450.15
+
+Insert Azure SQL Database Screenshot Here
+
+---
+
+6. Networking Cost Comparison
+
+Networking charges were also considered during the comparison.
+
+- AWS charges approximately $0.01 per GB in each direction for inter-Availability Zone (AZ) data transfers.
+- Azure charges approximately $0.01 per GB for inter-zone data transfer between Availability Zones.
+
+For this small web application, deployment within a single Availability Zone minimizes networking costs because no significant inter-zone traffic is expected.
+
+---
+
+7. Discount Mechanisms
+
+AWS Savings Plans
+
+AWS provides Savings Plans that allow customers to reduce compute costs by committing to one-year or three-year usage. These plans offer lower pricing for long-running workloads compared to standard On-Demand pricing.
+
+Azure Reserved Instances and Azure Hybrid Benefit
+
+Microsoft Azure offers Reserved Virtual Machine Instances and Azure Hybrid Benefit. Reserved Instances reduce virtual machine costs for predictable workloads, while Azure Hybrid Benefit allows organizations with eligible Microsoft licenses to lower Windows virtual machine licensing costs.
+
+---
+
+8. Overall Cost Comparison
+
+Service| AWS| Azure
+Compute| $15.04| $39.64
+Storage| $2.30| $3.12
+Database| $199.66| $450.15
+Total Estimated Monthly Cost| $216.99| $492.91
+
+---
+
+9. Analysis
+
+The comparison shows that AWS provides the lower estimated monthly cost for the selected configurations. The Amazon EC2 virtual machine and Amazon S3 storage services are significantly less expensive than their Azure counterparts for this scenario.
+
+The database comparison also demonstrates that pricing depends heavily on configuration choices. The selected Azure SQL Database uses a General Purpose provisioned deployment, while the Amazon RDS configuration uses a Multi-AZ deployment. Both configurations provide additional availability and managed capabilities, which increase monthly costs compared to basic database deployments.
+
+---
+
+10. Cost Optimization Strategies
+
+Strategy 1: Use Reserved Pricing
+
+Organizations running long-term workloads can reduce costs by using AWS Savings Plans or Azure Reserved Virtual Machine Instances instead of standard pay-as-you-go pricing.
+
+Strategy 2: Right-Size Cloud Resources
+
+Selecting virtual machines, storage, and database services that closely match application requirements helps eliminate unnecessary costs. Regular monitoring and resizing of resources improve overall cloud cost efficiency.
+
+---
+
+11. Conclusion
+
+This comparison evaluated three essential cloud services required to deploy a small web application: compute, storage, and managed database services. AWS produced the lower estimated monthly cost for the selected configuration, making it the more cost-effective solution in this comparison.
+
+Azure remains a strong option for organizations that rely on Microsoft technologies, particularly when using Azure Hybrid Benefit or Reserved Instances to reduce licensing and infrastructure costs.
+
+Overall, both cloud providers offer reliable and scalable services, but the most cost-effective choice depends on workload requirements, deployment architecture, licensing, and long-term business needs.
